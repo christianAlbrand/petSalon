@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Document</title>
+    <style>
+        header{
+            background-image: url(img/pngegg.png);
+            background-size: cover;
+        }
+        body{
+            background-image: url(img/5dogsBckg.png);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header class="regHeader">
+        
+        <div class="nav-bar">
+            <h1>Register a pet here!!!</h1>
+            <nav> <a href="index.html"> Home </a></nav>
+        </div>
+        <div class="dogImage">
+            <img src="img\cute-small-dog-with-flying-ears-91506491023xjn6ofls03.png" alt="">
+        </div>
+    </header>
+    <main>
+        <button onclick="displayNames()">Display Registered Pets</button>
+        <table id="dogRegister">
+            <thead id="thRegister">
+
+            </thead>
+            <tbody id="tbRegister">
+
+            </tbody>
+        </table>
+        <script src="./scripts/register.js"></script>
+    </main>
+</body>
+</html>

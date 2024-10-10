@@ -1,0 +1,59 @@
+#dogRegister{
+    font-size: large;
+    font-weight: 100;
+    font-family: Arial;
+}
+
+header{
+    background-color: #ffcc00;
+    margin: auto;
+}
+
+
+a{
+    color: black;
+    text-decoration:underline white;
+    font-weight: 800;
+    font-style: oblique;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    padding-right: 5%;
+}
+
+.nav-bar h1{
+    font-weight: 900;
+    margin-left: 5%;
+}
+
+
+td, th, table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px black;
+}
+
+.dogImage{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 1%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -1,0 +1,24 @@
+a{
+    color: black;
+    text-decoration:underline white;
+    font-weight: 800;
+    font-style: oblique;
+}
+
+img{
+    max-width: 50%;
+}
+
+.fixed{
+    background-color: #FFF8E7;
+    margin: auto;
+    margin-bottom: 40%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 1%;
+}
+
+.images-fixed{
+    width: 100%;
+    margin-left: 20%;
+}
