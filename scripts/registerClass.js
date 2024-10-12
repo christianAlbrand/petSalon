@@ -1,10 +1,11 @@
 let pets = [];
 
 //object creator
-function Pet(ownerName,petName, petAge, petGender, diet, service){
+function Pet(ownerName,petName, type, petAge, petGender, diet, service){
     //properties = parameter
     this.ownerName = ownerName;
     this.petName = petName;
+    this.type = type
     this.petAge = petAge;
     this.petGender = petGender;
     this.diet = diet;
@@ -14,6 +15,7 @@ function Pet(ownerName,petName, petAge, petGender, diet, service){
 function register(){
     let inputOwnerName = document.getElementById("txtOwnerName").value;
     let inputName = document.getElementById("txtName").value;
+    let inputType = document.getElementById("txtType").value;
     let inputAge = document.getElementById("txtAge").value;
     let inputFemale = document.getElementById("txtFemale")
     let inputMale = document.getElementById("txtMale")
@@ -28,11 +30,12 @@ function register(){
     let inputDiet = document.getElementById("txtDiet").value;
     let inputService = document.getElementById("txtService").value;
     //create the obj
-    let newPet = new Pet(inputOwnerName, inputName,inputAge,inputGender, inputDiet, inputService);
+    let newPet = new Pet(inputOwnerName, inputName, inputType, inputAge, inputGender, inputDiet, inputService);
     console.log(newPet);
     pets.push(newPet);
     document.getElementById("txtOwnerName").value= "";
     document.getElementById("txtName").value = "";
+    document.getElementById("txtType").value = "";
     document.getElementById("txtAge").value= "";
     document.getElementById("txtMale").checked = false
     document.getElementById("txtFemale").checked = false
