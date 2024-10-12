@@ -10,6 +10,7 @@
         header{
             background-image: url(img/pngegg.png);
             background-size: cover;
+            background-attachment: fixed;
         }
         body{
             background-image: url(img/5dogsBckg.png);
@@ -30,15 +31,19 @@
         </div>
     </header>
     <main>
-        <button onclick="displayNames()">Display Registered Pets</button>
-        <table id="dogRegister">
+        
+        <!-- <table id="dogRegister">
             <thead id="thRegister">
 
             </thead>
             <tbody id="tbRegister">
 
             </tbody>
-        </table>
+        </table> -->
+        <button onclick="displayNamesCard()">Display Registered Pets</button>
+        <div id="register-pets-container">
+            
+        </div>
         <script src="./scripts/register.js"></script>
     </main>
 </body>

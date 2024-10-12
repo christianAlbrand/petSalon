@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/registerClass.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <title>Document</title>
+    <style>
+        header{
+            background-image: url(img/pngegg.png);
+            background-size: cover;
+        }
+        body{
+            background-image: url(img/pngegg.png);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-Register">
+            <h1> The Fashion pet </h1>
+            <nav>
+                <a href="index.html"> Home </a>
+                <a href="registerClass.html"> Register </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="register-container">
+            <div class="form-group">
+                <label>Owner Name: </label>
+                <input type="text" id="txtOwnerName"> 
+            </div>
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text" id = "txtName">
+            </div>
+            <div class="form-group">
+                <label>Age: </label>
+                <input type="number" id="txtAge">
+            </div>
+            <form class="form-group-gender">
+                <label>Gender: </label>
+                <input type="radio" id="txtMale" name="gender" value="male"> Male <img src="./img/Male.webp">
+                <input type="radio" id="txtFemale" name="gender" value="female"> Female <img src="./img/female.webp">
+                <!-- <input type="text" id="txtGender"> -->
+            </form>
+            <div class="form-group">
+                <label>Diet: </label>
+                <input type="text" id="txtDiet"> 
+            </div>
+            <div class="form-group">
+                <label>Service: </label>
+                <select id="txtService">
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="grooming">Grooming</option>
+                    <option value="nails">Nails</option>
+                    <option value="vaccines">Vaccines</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="register()">Register</button>
+            </div>
+        </div>
+        <script src="./scripts/registerClass.js"></script>
+    </main>
+</body>
+</html>

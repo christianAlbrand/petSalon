@@ -9,12 +9,22 @@ header{
     margin: auto;
 }
 
+#register-pets-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
 
-a{
-    color: black;
-    text-decoration:underline white;
-    font-weight: 800;
-    font-style: oblique;
+.register-pets-item{
+    background-color: aqua;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 20%;
+}
+
+.register-pets-item p{
+    margin-bottom: 10%;
 }
 
 .nav-bar{
@@ -56,4 +66,12 @@ table{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.Shower{
+    background-color: lightblue;
+    color: black;
+}
+.Veterinary{
+    background-color: aquamarine;
 }

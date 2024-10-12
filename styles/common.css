@@ -3,3 +3,11 @@ body{
     margin: 0;
     font-family: arial;
 }
+
+a{
+    color: black;
+    text-decoration:underline white;
+    font-weight: 800;
+    font-style: oblique;
+    font-size: large;
+}

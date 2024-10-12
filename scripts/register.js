@@ -20,35 +20,51 @@ let pets = [{
 }];
 //create pets
 
-function displayNames(){
-    document.getElementById("tbRegister").innerHTML = " "
-    document.getElementById("thRegister").innerHTML = " "
+// function displayNames(){
+//     document.getElementById("tbRegister").innerHTML = " "
+//     document.getElementById("thRegister").innerHTML = " "
 
-    document.getElementById("thRegister").innerHTML = `
-    <tr>
-        <th> Name </th>
-        <th> Age </th>
-        <th> Breed </th>
-        <th> Gender </th>
-    </tr>
-    `;
+//     document.getElementById("thRegister").innerHTML = `
+//     <tr>
+//         <th> Name </th>
+//         <th> Age </th>
+//         <th> Breed </th>
+//         <th> Gender </th>
+//     </tr>
+//     `;
+//     for (let i = 0; i < pets.length; i++) {
+//         document.getElementById("tbRegister").innerHTML +=`
+//         <tr>
+//             <td> ${pets[i].name} </td>
+//             <td> ${pets[i].age} </td>
+//             <td> ${pets[i].breed}</td>
+//             <td> ${pets[i].gender}</td>
+//         </tr>
+//         `
+//     }
+
+//     document.getElementById("tbRegister").innerHTML +=`
+//         <tr>
+//             <td> ${"Registered pets: " + pets.length} </td>
+//             <td> ${"Average age of pets: " + average()} </td>
+//         </tr>
+//         `
+// }
+
+function displayNamesCard(){
+    document.getElementById("register-pets-container").innerHTML = " "
     for (let i = 0; i < pets.length; i++) {
-        document.getElementById("tbRegister").innerHTML +=`
-        <tr>
-            <td> ${pets[i].name} </td>
-            <td> ${pets[i].age} </td>
-            <td> ${pets[i].breed}</td>
-            <td> ${pets[i].gender}</td>
-        </tr>
+        let servie = pets[i].service === "Shower" ; "Veterinary" ; "Hair Cut";
+        document.getElementById("register-pets-container").innerHTML += `
+        <div class ="register-pets-item">
+            <p> Pet Name: ${pets[i].name} </p>
+            <p> Pet Age: ${pets[i].age} </p>
+            <p> Pet Breed: ${pets[i].breed} </p>
+            <p> Pet Gender: ${pets[i].gender} </p>
+            <p> Pet Service: ${pets[i].service} </p>
+        </div>
         `
     }
-
-    document.getElementById("tbRegister").innerHTML +=`
-        <tr>
-            <td> ${"Registered pets: " + pets.length} </td>
-            <td> ${"Average age of pets: " + average()} </td>
-        </tr>
-        `
 }
 
 function average(){
