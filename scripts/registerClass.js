@@ -5,7 +5,7 @@ function Pet(ownerName,petName, type, petAge, petGender, diet, service){
     //properties = parameter
     this.ownerName = ownerName;
     this.petName = petName;
-    this.type = type
+    this.type = type;
     this.petAge = petAge;
     this.petGender = petGender;
     this.diet = diet;
@@ -33,6 +33,9 @@ function register(){
     let newPet = new Pet(inputOwnerName, inputName, inputType, inputAge, inputGender, inputDiet, inputService);
     console.log(newPet);
     pets.push(newPet);
+    displayTotals();
+    // displayCards();
+    displayTable();
     document.getElementById("txtOwnerName").value= "";
     document.getElementById("txtName").value = "";
     document.getElementById("txtType").value = "";
@@ -45,11 +48,14 @@ function register(){
 
 function init(){
     console.log("init")
-    let pet1 = new Pet("Albert","Scooby", 99, "Male", "Grooming")
-    let pet2 = new Pet("Marc","Leyla", 32, "Male", "Hair Cut")
-    let pet3 = new Pet("Christian","Max", 12, "Female", "Grooming")
+    let pet1 = new Pet("Albert","Scooby", "Bird", 99, "Male", "Vegies","gromming")
+    let pet2 = new Pet("Marc","Max", "Dog", 99, "Male", "Meat","nails")
+    let pet3 = new Pet("Christian","Leyla", "Cat", 99, "Male", "Meat","gromming")
 
     pets.push(pet1, pet2, pet3);
     console.log(pet1, pet2, pet3)
+    displayTotals();
+    // displayCards();
+    displayTable();
 }
 window.onload=init;//wait to render the html
