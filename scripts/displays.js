@@ -35,12 +35,13 @@ function displayTable(){
         <th> Pet Gender </th>
         <th> Pet Diet </th>
         <th> Service </th>
+        <th> Action </th>
     </tr>
     `;
     for (let i = 0; i < pets.length; i++) {
         let pet = pets[i];
         document.getElementById("tbRegister").innerHTML +=`
-        <tr  class = "pet ${pet.service}">
+        <tr id = "${i}" class = "pet ${pet.service}">
             <td> ${pet.ownerName} </td>
             <td> ${pet.petName} </td>
             <td> ${pet.type}</td>
@@ -48,6 +49,7 @@ function displayTable(){
             <td> ${pet.petGender} </td>
             <td> ${pet.diet} </td>
             <td> ${pet.service}</td>
+            <td><button onclick="deletePet(${i})" class="btn btn-danger">Delete</button></td>
         </tr>
         `
     }

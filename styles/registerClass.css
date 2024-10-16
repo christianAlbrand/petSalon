@@ -60,7 +60,7 @@ input, select{
     border-radius: 50px;
 }
 
-.btn{
+.Button-container button{
     width: 25%;
     margin-bottom: 15px;
     margin-left: 37%;
@@ -98,6 +98,8 @@ table tr, table th, table td{
     text-align: center;
 }
 
+
+
 table{
     margin-left: auto;
     margin-right: auto;
@@ -112,7 +114,7 @@ table{
 .total-pets{
     font-weight: 700;
     border: 1px solid black;
-    width: 5%;
+    width: 8%;
     margin-left: 1%;
     text-align: center;
 }

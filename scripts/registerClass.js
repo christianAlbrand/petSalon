@@ -1,4 +1,13 @@
 let pets = [];
+let inputOwnerName = document.getElementById("txtOwnerName");
+let inputName = document.getElementById("txtName");
+let inputType = document.getElementById("txtType");
+let inputAge = document.getElementById("txtAge");
+let inputFemale = document.getElementById("txtFemale");
+let inputMale = document.getElementById("txtMale");
+let inputGender = "";
+let inputDiet = document.getElementById("txtDiet");
+let inputService = document.getElementById("txtService");
 
 //object creator
 function Pet(ownerName,petName, type, petAge, petGender, diet, service){
@@ -12,14 +21,21 @@ function Pet(ownerName,petName, type, petAge, petGender, diet, service){
     this.service = service;
 }
 
+function isValid(pet){
+    let validation = true;
+
+    if(pet.petName == ""){
+        validation = false
+        inputName.classList.add("error");
+    }
+    if(pet.service==""){
+        validation = false
+        inputService.classList.add("error");
+    }
+    return validation
+}
+
 function register(){
-    let inputOwnerName = document.getElementById("txtOwnerName").value;
-    let inputName = document.getElementById("txtName").value;
-    let inputType = document.getElementById("txtType").value;
-    let inputAge = document.getElementById("txtAge").value;
-    let inputFemale = document.getElementById("txtFemale")
-    let inputMale = document.getElementById("txtMale")
-    let inputGender = ""
     if(inputFemale.checked) {
         //Male radio button is checked
         inputGender = inputFemale.value
@@ -27,15 +43,18 @@ function register(){
         //Female radio button is checked
         inputGender = inputMale.value
     }
-    let inputDiet = document.getElementById("txtDiet").value;
-    let inputService = document.getElementById("txtService").value;
+    
     //create the obj
-    let newPet = new Pet(inputOwnerName, inputName, inputType, inputAge, inputGender, inputDiet, inputService);
-    console.log(newPet);
-    pets.push(newPet);
-    displayTotals();
-    // displayCards();
-    displayTable();
+    let newPet = new Pet(inputOwnerName.value, inputName.value, inputType.value, inputAge.value, inputGender, inputDiet.value, inputService.value);
+    if(isValid(newPet) == true){
+        console.log(newPet);
+        pets.push(newPet);
+        displayTotals();
+        displayTable();
+    } else{
+        alert("Complete the infromation")
+    }
+    
     document.getElementById("txtOwnerName").value= "";
     document.getElementById("txtName").value = "";
     document.getElementById("txtType").value = "";
@@ -44,6 +63,14 @@ function register(){
     document.getElementById("txtFemale").checked = false
     document.getElementById("txtDiet").value = "";
     document.getElementById("txtService").value= "";
+}
+
+function deletePet(petId){
+    console.log("Deleting pet..." + petId)
+    document.getElementById(petId).remove();
+    pets.splice(petId,1);
+    displayTable();
+    displayTotals();
 }
 
 function init(){
