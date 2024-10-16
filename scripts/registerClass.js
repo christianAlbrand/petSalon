@@ -23,7 +23,13 @@ function Pet(ownerName,petName, type, petAge, petGender, diet, service){
 
 function isValid(pet){
     let validation = true;
-
+    inputOwnerName.classList.remove("error");
+    inputName.classList.remove("error");
+    inputService.classList.remove("error");
+    if(pet.ownerName == ""){
+        validation = false
+        inputOwnerName.classList.add("error")
+    }
     if(pet.petName == ""){
         validation = false
         inputName.classList.add("error");
