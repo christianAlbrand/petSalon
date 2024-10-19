@@ -70,8 +70,6 @@ function register(){
         displayTotals();
         displayTable();
         resetForms();
-    } else{
-        alert("Complete the infromation")
     }
 }
 
