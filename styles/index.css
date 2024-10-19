@@ -6,13 +6,31 @@ img{
 .fixed{
     background-color: #FFF8E7;
     margin: auto;
-    margin-bottom: 40%;
     border-radius: 10px;
     border: 2px solid black;
     margin-left: 1%;
 }
 
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.nav-bar h1{
+    font-weight: 800;
+}
+
+.nav-bar{
+    justify-content: space-around;
+}
+
 .images-fixed{
     width: 100%;
-    margin-left: 20%;
+    padding-left: 10%;
+}
+
+.grid-two-column{
+    display: flex;
 }

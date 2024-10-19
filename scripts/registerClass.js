@@ -29,14 +29,26 @@ function isValid(pet){
     if(pet.ownerName == ""){
         validation = false
         inputOwnerName.classList.add("error")
+        $(".validationOwnerNameError").css("color", "red").show();
+    }else{
+        $("#txtOwnerName").removeClass("error");
+        $(".validationOwnerNameError").hide();
     }
     if(pet.petName == ""){
         validation = false
         inputName.classList.add("error");
+        $(".validationPetNameError").css("color", "red").show();
+    } else{
+        $("#txtName").removeClass("error");
+        $(".validationPetNameError").hide();
     }
     if(pet.service==""){
         validation = false
         inputService.classList.add("error");
+        $(".validationServiceError").css("color", "red").show();
+    }else{
+        $("#txtService").removeClass("error");
+        $(".validationServiceError").hide();
     }
     return validation
 }
@@ -57,10 +69,13 @@ function register(){
         pets.push(newPet);
         displayTotals();
         displayTable();
+        resetForms();
     } else{
         alert("Complete the infromation")
     }
-    
+}
+
+function resetForms(){
     document.getElementById("txtOwnerName").value= "";
     document.getElementById("txtName").value = "";
     document.getElementById("txtType").value = "";
@@ -79,7 +94,11 @@ function deletePet(petId){
     displayTotals();
 }
 
+
 function init(){
+    $(".validationOwnerNameError").hide();
+    $(".validationPetNameError").hide();
+    $(".validationServiceError").hide();
     console.log("init")
     let pet1 = new Pet("Albert","Scooby", "Bird", 99, "Male", "Vegies","gromming")
     let pet2 = new Pet("Marc","Max", "Dog", 99, "Male", "Meat","nails")
