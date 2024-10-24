@@ -8,6 +8,10 @@
     padding-top: 1%;
 }
 
+footer{
+    height: 1vh;
+}
+
 .nav-footer-menu a{
     color: white;
     display: flex;

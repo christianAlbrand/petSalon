@@ -11,12 +11,17 @@ h2{
     border-bottom: 2px solid black;
 }
 
+.tbBckgr{
+    color: black;
+    font-weight: 700;
+    background-color: white;
+}
+
 #txtPrice{
     color: green;
 }
 
 footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
 }

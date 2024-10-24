@@ -40,7 +40,8 @@ function register(){
     if(isValid(newService)){
         console.log(newService);
         clearInputs();
-        //save(service)
+        save(newService)
+        displayTableServices()
     }
 }
 function clearInputs(){
@@ -48,11 +49,36 @@ function clearInputs(){
     $("#txtPrice").val("");
 }
 
+function displayTableServices(){
+    let services = read();
+    document.getElementById("thAddService").innerHTML = " "
+    document.getElementById("tbAddService").innerHTML = " "
+
+    document.getElementById("thAddService").innerHTML = `
+    <tr class = "thBckgr">
+        <th> Title </th>
+        <th> Price </th>
+        <th> Action </th>
+    </tr>
+    `;
+    for (let i = 0; i < services.length; i++) {
+        let service = services[i];
+        document.getElementById("tbAddService").innerHTML +=`
+        <tr id = "${i}" class = "tbBckgr">
+            <td> ${service.title} </td>
+            <td> ${service.price} </td>
+            <td> <button onclick="deleteService(${i})" class="btn btn-danger">Delete</button></td>
+        </tr>
+        `
+    }
+}
+
 
 function init(){
     //hook events
     $(".titleValidationMsg").hide();
     $(".priceValidationMsg").hide();
+    displayTableServices();
     $("#btnRegister").click(register);
     $("#txtPrice").on("keypress", function(event){
         if (event.which == 13){
