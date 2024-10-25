@@ -11,6 +11,10 @@ img{
     margin-left: 1%;
 }
 
+header{
+    min-height: 90vh;
+}
+
 footer{
     bottom: 0;
     width: 100%;

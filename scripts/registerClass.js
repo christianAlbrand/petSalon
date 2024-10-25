@@ -92,6 +92,26 @@ function deletePet(petId){
     displayTotals();
 }
 
+$("#dark-mode").on('click',function(){
+    if($("body").css("background-color") == "rgb(0, 0, 0)"){
+        $("body").css("color","black").css("background-color", "white")
+        $(this).text("dark mode")
+    } else{
+        $("body").css("color","gray").css("background-color", "black")
+        $(this).text("light mode");
+    }
+})
+
+function getServices(){
+    let services = read(); //this fn is under the storeManager
+    let option="";
+    for (let i = 0; i < services.length; i++) {
+        let service = services[i];
+        option+=`<option value="${service.title}"> ${service.title} </option>`    
+    }
+    $("#txtService").append(option)
+}
+
 
 function init(){
     $(".validationOwnerNameError").hide();
@@ -107,5 +127,6 @@ function init(){
     displayTotals();
     // displayCards();
     displayTable();
+    getServices();
 }
 window.onload=init;//wait to render the html

@@ -29,7 +29,9 @@
                 <a href="registerClass.html"> Register </a>
                 <a href="services.html"> Services </a>
             </nav>
+            
         </div>
+        <button id="dark-mode">Dark mode</button>
     </header>
     <main>
         <div class="register-container">
@@ -76,9 +78,6 @@
                     <label>Pet Service: </label>
                     <select id="txtService">
                         <option value="" disabled selected>-- Select an option --</option>
-                        <option value="gromming">Gromming</option>
-                        <option value="nails">Nails</option>
-                        <option value="vaccines">Vaccines</option>
                     </select>
                     <small class="validationServiceError">This is a required field</small>
                 </div>
@@ -87,10 +86,11 @@
                 </div>
             </div>
         </div>
+        
         <div>
             <h2>Registered Pets</h2>
             <div class="total-pets">
-                <p>Total pets: <span id="total">100</span></p>
+                <p id="total-text">Total pets: <span id="total">100</span></p>
             </div>
             <div id="pets">
                 
@@ -107,6 +107,7 @@
         <script src="./plugins/jQuery.3.7.1.js"></script>
         <script src="./scripts/registerClass.js"></script>
         <script src="./scripts/displays.js"></script>
+        <script src="./scripts/storeManager.js"></script>
     </main>
     <footer>
         <div class="footer-container">
